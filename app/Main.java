@@ -1,19 +1,15 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            List<Cliente> clientes = new ArrayList<>();
-            List<CentroDistribucion> centros = new ArrayList<>();
-            List<Ruta> rutas = new ArrayList<>();
 
-            Optimizado optimizacion = new Optimizado(clientes, centros, rutas);
-            
+            Optimizado optimizacion = new Optimizado();
+
             optimizacion.cargarClientesYCentros("clientesYCentros.txt");
             optimizacion.cargarRutas("rutas.txt");
-            
-            optimizacion.resolver();
+
+            optimizacion.resolverAEstrella();
         } catch (IOException e) {
             System.out.println("Error al leer los archivos: " + e.getMessage());
         }

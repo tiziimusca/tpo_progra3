@@ -1,5 +1,4 @@
-156	#Total de rutas 
-1,2,10	#nodo origen, #nodo destino, costo unitario de transporte
+1,2,10
 2,1,10
 2,3,10
 3,2,10
