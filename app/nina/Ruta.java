@@ -1,3 +1,4 @@
+package nina;
 
 public class Ruta {
     int origen;

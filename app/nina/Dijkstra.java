@@ -1,3 +1,5 @@
+package nina;
+
 import java.util.*;
 
 public class Dijkstra {
@@ -7,14 +9,15 @@ public class Dijkstra {
         distancias[origen] = 0;
 
         PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingDouble(a -> a[1]));
-        pq.add(new int[]{origen, 0});
+        pq.add(new int[] { origen, 0 });
 
         while (!pq.isEmpty()) {
             int[] actual = pq.poll();
             int nodo = actual[0];
             double costo = actual[1];
 
-            if (costo > distancias[nodo]) continue;
+            if (costo > distancias[nodo])
+                continue;
 
             for (Ruta ruta : grafo.get(nodo)) {
                 int vecino = ruta.destino;
@@ -22,7 +25,7 @@ public class Dijkstra {
 
                 if (nuevoCosto < distancias[vecino]) {
                     distancias[vecino] = nuevoCosto;
-                    pq.add(new int[]{vecino, (int) nuevoCosto});
+                    pq.add(new int[] { vecino, (int) nuevoCosto });
                 }
             }
         }

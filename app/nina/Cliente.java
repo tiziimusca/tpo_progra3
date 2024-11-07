@@ -1,3 +1,4 @@
+package nina;
 
 public class Cliente {
     int id;
@@ -8,7 +9,7 @@ public class Cliente {
         this.volumenProduccionAnual = volumenProduccionAnual;
     }
 
-    public int getId(){
+    public int getId() {
         return this.id;
     }
 

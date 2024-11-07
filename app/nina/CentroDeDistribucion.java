@@ -1,3 +1,5 @@
+package nina;
+
 public class CentroDeDistribucion {
     int id;
     double costoTransportePuerto;
@@ -9,7 +11,7 @@ public class CentroDeDistribucion {
         this.costoOperacionAnual = costoOperacionAnual;
     }
 
-    public int getId(){
+    public int getId() {
         return this.id;
     }
 }
